@@ -15,6 +15,10 @@
 ## Imprimir el área y perímetro de los objetos instanciados utilizando el
 #  método del módulo implementado.
 
+module Formula
+
+end
+
 class Rectangulo
   def initialize(base, altura)
     @base = base
