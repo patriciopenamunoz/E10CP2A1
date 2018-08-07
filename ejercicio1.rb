@@ -20,12 +20,14 @@ class Alumno
     @nota3 = nota3
     @nota4 = nota4
   end
+
+  def self.read_file(path = 'notas.txt')
+    File.readlines(path)
+  end
 end
 
 alumnos = []
-data = []
-File.open('notas.txt', 'r') { |file| data = file.readlines }
-data.each do |alumno|
+Alumno.read_file().each do |alumno|
   alumnos << Alumno.new(*alumno.split(', '))
 end
 
