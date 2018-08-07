@@ -20,10 +20,18 @@ class Rectangulo
     @base = base
     @altura = altura
   end
+
+  def lados
+    puts "BASE: #{@base} ALTURA: #{@altura}"
+  end
 end
 
 class Cuadrado
   def initialize(lado)
     @lado = lado
+  end
+
+  def lados
+    puts "LADO: #{@lado}"
   end
 end
