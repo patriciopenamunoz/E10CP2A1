@@ -19,6 +19,10 @@ module Formula
   def self.perimetro(lado1, lado2)
     2 * (lado1 + lado2)
   end
+
+  def self.area(lado1, lado2)
+    lado1 * lado2
+  end
 end
 
 class Rectangulo
