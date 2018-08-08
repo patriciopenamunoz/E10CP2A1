@@ -68,3 +68,6 @@ end
 
 r = Rectangulo.new(5,2)
 c = Cuadrado.new(4)
+
+puts "Rectangulo: Perimetro = #{r.perimetro}, Area = #{r.area}"
+puts "Cuadrado: Perimetro = #{c.perimetro}, Area = #{c.area}"
