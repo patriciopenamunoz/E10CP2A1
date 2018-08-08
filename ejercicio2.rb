@@ -65,3 +65,6 @@ class Cuadrado
     super
   end
 end
+
+r = Rectangulo.new(5,2)
+c = Cuadrado.new(4)
