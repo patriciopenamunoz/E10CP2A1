@@ -16,16 +16,18 @@
 #  método del módulo implementado.
 
 module Formula
-  def self.perimetro(lado1, lado2)
+  def perimetro(lado1, lado2)
     2 * (lado1 + lado2)
   end
 
-  def self.area(lado1, lado2)
+  def area(lado1, lado2)
     lado1 * lado2
   end
 end
 
 class Rectangulo
+  include Formula
+
   def initialize(base, altura)
     @base = base
     @altura = altura
@@ -34,14 +36,32 @@ class Rectangulo
   def lados
     puts "BASE: #{@base} ALTURA: #{@altura}"
   end
+
+  def perimetro(lado1 = @base, lado2 = @altura)
+    super
+  end
+
+  def area(lado1 = @base, lado2 = @altura)
+    super
+  end
 end
 
 class Cuadrado
+  include Formula
+
   def initialize(lado)
     @lado = lado
   end
 
   def lados
     puts "LADO: #{@lado}"
+  end
+
+  def perimetro(lado1 = @lado, lado2 = @lado)
+    super
+  end
+
+  def area(lado1 = @lado, lado2 = @lado)
+    super
   end
 end
